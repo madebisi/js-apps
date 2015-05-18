@@ -1,0 +1,11 @@
+<div ng-if="!slip.showReceipt">
+<p>Available Bets:</p>
+<p ng-if="ui.showBetsLoading">loading bets..please wait!!</p>
+<ul class="button-list">
+	<li data-ng-repeat="bet in ui.availableBets" ng-class="bet.selected" ng-click="bet.addToSlip()">
+		<span>{{bet.event}}</span>
+		<span>{{bet.name}}</span>
+		<span class="odds" >{{bet.oddsString}}</span>
+	</li>
+</ul>
+</div>

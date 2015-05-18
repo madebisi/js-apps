@@ -1,0 +1,33 @@
+<div  ng-if="slip.betSlipItems.length &&  slip.showBetSlip">
+  <p>Selected Bets:</p>
+   <div class="details-bets" data-ng-repeat="bet in slip.betSlipItems">
+      <div class="name">{{bet.event}} - {{bet.name}}</div>
+      <div class="price">
+          <div class="payment-details"><input type="text" class="betStake" id="betStake" value="{{bet.stake}}" ng-blur="bet.updateWinnings(bet)" ng-model="bet.stake"/> @ <span class="odds">{{bet.oddsString}}</span> could return <span>{{ui.dispCurrency(bet.winnings)}}</span> <a href="#" ng-click="slip.remove(bet)">remove</a></div>
+      </div>
+   </div>
+   <div>
+         <span class="winnings">Total Winnings: {{ui.dispCurrency(slip.betTotalWinnings)}}</span><br/><br/>
+         <button class="placebet" ng-click="slip.submit()">Place Bet</button> 
+   </div>
+</div>
+
+<div ng-if="slip.betReceiptItems.length &&  slip.showReceipt">
+  <p>Placed Bets:</p>
+
+  <div class="details-receipt" data-ng-repeat="bet in slip.betReceiptItems">
+   <div class="name">{{bet.event}} - {{bet.name}}</div>
+   <div class="price">
+       <div class="payment-details">{{bet.stake | currency: ui.cc['GBP']}} @ {{bet.oddsString}} could return <span>{{ui.dispCurrency(bet.winnings)}}</span> 
+          <br/>Bet Placed<br/>
+          Your reference : {{bet.transaction_id}}
+        </div>        
+   </div>
+  </div>
+  <div>
+    <span class="winnings">Possible Total Winnings: {{ui.dispCurrency(slip.betTotalWinnings)}}</span>
+   
+    <br/><br/> <p ng-if="ui.showReceiptsLoading">Placing your Bets..please wait!!</p>
+    <a href='#' ng-click="ui.resetForm()">Reload form</a>
+  </div>
+</div>

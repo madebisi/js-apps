@@ -1,0 +1,43 @@
+{
+  "name": "skyBet-Test",
+  "version": "1.0.0",
+  "authors": "Michael Adebisi",
+  "private": true,
+  "description": "Browserify, require, commonJS project and a much more flexible application design",
+  "browser": {
+    "angular": "./node_modules/angular/angular.min.js",
+    "angular-currency-code": "./js/lib/angular-currency-code.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim",
+      "browserify-ngannotate",
+      "envify"
+    ]
+  },
+  "browserify-shim": {
+    "angular": {
+      "exports": "angular"
+    }
+  },
+  "browserify-ngannotate": {
+    "remove": true,
+    "add": true,
+    "single_quotes": true
+  },
+  "devDependencies": {
+    
+    "browser-sync": "~1.3.6",
+    "browserify": "5.10.1",
+    "browserify-length": "0.0.0",
+    "browserify-ngannotate": "^0.2.0",
+    "browserify-shim": "~3.7.0",
+    "envify": "^3.0.0"
+
+  },
+  "dependencies": {
+    "angular": "1.3.8",
+    "browsernizr": "^1.0.2",
+    "lodash": "^2.4.1"
+  }
+}

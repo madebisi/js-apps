@@ -1,0 +1,148 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    color: #222;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: bold;
+    font-family: arial, verdana;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+.details-receipt,.details-bets{
+    margin-bottom: 20px;
+}
+
+img,
+svg {
+    vertical-align: middle;
+}
+
+input.betStake{
+    max-width: 50px;
+}
+li span{
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #000;
+    width: 200px;
+    }
+li.selected span, .winnings{
+    background-color: lightgreen;
+    }   
+
+span.winnings{
+    padding: 10px;
+    }   
+
+li span.odds{
+    width: 70px;
+    text-align: center;
+    background-color: #ccc;
+    }
+
+li{ cursor: pointer;
+    margin-bottom: 10px;
+    }
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.bettext {
+    color: #ec008c;
+}
+
+.site-header {
+    padding: 7px 0 7px 0;
+    box-shadow: 0 3px 3px #888888;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.content {
+    margin-top: 33px;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    display: block;
+    width: 100%;
+}
+
+.button-list {
+    width: 100%;
+    height: auto;
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    
+    padding: 10px;
+    border: 1px solid grey;
+    background: -moz-linear-gradient(top, rgba(155, 155, 155, 1) 0%, rgba(238, 238, 238, 1) 47%, rgba(220, 220, 220, 1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(155, 155, 155, 1)), color-stop(47%, rgba(238, 238, 238, 1)), color-stop(100%, rgba(220, 220, 220, 1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(155, 155, 155, 1) 0%, rgba(238, 238, 238, 1) 47%, rgba(220, 220, 220, 1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(155, 155, 155, 1) 0%, rgba(238, 238, 238, 1) 47%, rgba(220, 220, 220, 1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(155, 155, 155, 1) 0%, rgba(238, 238, 238, 1) 47%, rgba(220, 220, 220, 1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(155, 155, 155, 1) 0%, rgba(238, 238, 238, 1) 47%, rgba(220, 220, 220, 1) 100%); /* W3C */
+}
+
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 640px) {
+    .site-header{
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+    }
+
+    /* Style adjustments for viewports that meet the condition */
+    .flex-container {
+        padding: 3%;
+        display: inline-block;
+        float: left;
+    }
+
+    .master {
+        width: 40%;
+    }
+
+    .detail {
+        width: 60%;
+        padding-left: 0;
+    }
+}
+
